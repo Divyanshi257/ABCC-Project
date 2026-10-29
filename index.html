@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divyanshi | Software Engineer & DSA Specialist | B.Tech CSE</title>
+  <meta name="description" content="Portfolio of Divyanshi - B.Tech CSE, Software Engineer specializing in C, C++, Python, Data Structures & Algorithms, Hackathons, and Scalable Software Systems.">
+  <meta name="keywords" content="Divyanshi, Portfolio, B.Tech CSE, C, C++, Python, Data Structures, Algorithms, DSA, Hackathons, Software Developer, LeetCode">
+  <meta name="author" content="Divyanshi">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Divyanshi | Software Engineer & DSA Specialist">
+  <meta property="og:description" content="Explore projects, hackathon victories, algorithmic problem solving, and software engineering of Divyanshi.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons (FontAwesome CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme-color="violet">
+  <!-- Dynamic Mouse Spotlight Background -->
+  <div class="mouse-glow" id="mouseGlow"></div>
+
+  <!-- Interactive Canvas Particle Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Divyanshi's Portfolio Home">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Divyanshi</span>
+        <span class="logo-slash">/</span>
+        <span class="logo-bracket">&gt;</span>
+        <span class="logo-badge">DSA &bull; CSE</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-regular fa-user"></i> <span>About</span></a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> <span>Skills</span></a></li>
+          <li class="nav-item"><a href="#hackathons" class="nav-link"><i class="fa-solid fa-trophy"></i> <span>Hackathons</span></a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link"><i class="fa-solid fa-layer-group"></i> <span>Projects</span></a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> <span>Experience</span></a></li>
+          <li class="nav-item"><a href="#achievements" class="nav-link"><i class="fa-solid fa-award"></i> <span>Achievements</span></a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link"><i class="fa-regular fa-paper-plane"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions (Palette Theme Switcher & CTA) -->
+      <div class="nav-actions">
+        <!-- Accent Theme Picker Dropdown -->
+        <div class="theme-palette-wrapper" title="Customize Accent Glow">
+          <button class="theme-picker-btn" id="themePickerBtn" aria-label="Change Accent Color">
+            <span class="palette-dot current-dot"></span>
+            <i class="fa-solid fa-palette"></i>
+          </button>
+          <div class="palette-dropdown" id="paletteDropdown">
+            <button class="palette-opt active" data-color="violet" title="Neon Violet">
+              <span class="dot-swatch violet"></span> Violet
+            </button>
+            <button class="palette-opt" data-color="cyan" title="Cyber Cyan">
+              <span class="dot-swatch cyan"></span> Cyan
+            </button>
+            <button class="palette-opt" data-color="emerald" title="Emerald Matrix">
+              <span class="dot-swatch emerald"></span> Emerald
+            </button>
+            <button class="palette-opt" data-color="amber" title="Solar Amber">
+              <span class="dot-swatch amber"></span> Amber
+            </button>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta">
+          <span>Let's Connect</span>
+          <i class="fa-solid fa-arrow-trend-up"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrap -->
+  <main id="mainContent">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        
+        <div class="hero-content">
+          <!-- Availability Pill -->
+          <div class="status-pill animate-fade-down">
+            <span class="status-indicator">
+              <span class="pulse-ring"></span>
+              <span class="pulse-dot"></span>
+            </span>
+            <span class="status-text">Available for Software Engineering Roles &amp; Internships</span>
+          </div>
+
+          <!-- Main Hero Heading -->
+          <h1 class="hero-title animate-fade-up">
+            Hi, I'm <span class="gradient-text hero-name">Divyanshi</span>
+            <br>
+            <span class="role-wrapper">
+              <span class="typewriter-prefix">A Dedicated </span>
+              <span class="typewriter-text" id="typewriterText">Software Engineer</span>
+              <span class="typewriter-cursor">|</span>
+            </span>
+          </h1>
+
+          <!-- Hero Subtitle & Value Proposition -->
+          <p class="hero-lead animate-fade-up delay-1">
+            <strong>B.Tech Computer Science and Engineering</strong> undergraduate with strong algorithmic thinking and deep mastery in <strong>C, C++, and Python</strong>. Passionate about solving complex problems through <strong>Data Structures &amp; Algorithms</strong>, building high-impact software, and competing in hackathons.
+          </p>
+
+          <!-- Quick Highlights Pills -->
+          <div class="hero-tags animate-fade-up delay-2">
+            <span class="hero-tag"><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE</span>
+            <span class="hero-tag"><i class="fa-solid fa-code"></i> C, C++ &amp; Python</span>
+            <span class="hero-tag"><i class="fa-solid fa-network-wired"></i> DSA Specialist</span>
+            <span class="hero-tag"><i class="fa-solid fa-trophy"></i> Hackathon Achiever</span>
+          </div>
+
+          <!-- Hero Buttons CTA -->
+          <div class="hero-buttons animate-fade-up delay-3">
+            <a href="#projects" class="btn btn-primary btn-glow">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="#skills" class="btn btn-secondary">
+              <i class="fa-solid fa-brain"></i>
+              <span>Explore DSA &amp; Skills</span>
+            </a>
+            <button class="btn btn-ghost" id="openResumeBtn" aria-label="View Resume Summary">
+              <i class="fa-regular fa-file-pdf"></i>
+              <span>View Resume</span>
+            </button>
+          </div>
+
+          <!-- Hero Social Links Bar -->
+          <div class="hero-socials animate-fade-up delay-4">
+            <span class="socials-label">Connect:</span>
+            <div class="social-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LeetCode Profile">
+                <i class="fa-solid fa-code"></i>
+              </a>
+              <a href="mailto:divyanshi.cse@gmail.com" class="social-icon" aria-label="Send Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <button class="copy-email-chip" id="quickCopyEmailBtn" title="Copy Email Address">
+                <i class="fa-regular fa-copy"></i>
+                <span>divyanshi.cse@gmail.com</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase / Interactive Code & 3D Tech Card -->
+        <div class="hero-visual animate-fade-left">
+          <div class="card-3d-wrapper" id="heroCardWrapper">
+            <div class="tech-profile-card">
+              <!-- Window Bar -->
+              <div class="card-window-bar">
+                <div class="window-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="window-title">divyanshi_profile.cpp</div>
+                <div class="window-badge">O(1) Efficiency</div>
+              </div>
+
+              <!-- Profile Avatar Header inside Card -->
+              <div class="card-hero-profile">
+                <div class="avatar-glow-ring">
+                  <!-- Stylized Modern SVG Vector Avatar for Divyanshi -->
+                  <div class="avatar-svg-container">
+                    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="avatar-svg">
+                      <circle cx="60" cy="60" r="58" fill="url(#avatarBgGrad)" stroke="var(--accent-primary)" stroke-width="2"/>
+                      <circle cx="60" cy="48" r="21" fill="#241b35"/>
+                      <!-- Sleek hair silhouette with violet sheen -->
+                      <path d="M38 48C38 28 82 28 82 48C84 62 82 72 78 78C72 64 68 38 60 38C52 38 48 64 42 78C38 72 36 62 38 48Z" fill="var(--accent-primary)"/>
+                      <!-- Glasses frame -->
+                      <rect x="44" y="44" width="13" height="10" rx="3" fill="#0f172a" stroke="var(--accent-primary)" stroke-width="1.5"/>
+                      <rect x="63" y="44" width="13" height="10" rx="3" fill="#0f172a" stroke="var(--accent-primary)" stroke-width="1.5"/>
+                      <line x1="57" y1="49" x2="63" y2="49" stroke="var(--accent-primary)" stroke-width="1.5"/>
+                      <!-- Friendly smile -->
+                      <path d="M54 59C57 62 63 62 66 59" stroke="var(--accent-tertiary)" stroke-width="1.8" stroke-linecap="round"/>
+                      <!-- Modern tech blazer / hoodie -->
+                      <path d="M28 108C30 84 46 76 60 76C74 76 90 84 92 108" fill="#1e182a"/>
+                      <path d="M44 82L60 98L76 82" stroke="var(--accent-primary)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                      <defs>
+                        <radialGradient id="avatarBgGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 60) rotate(90) scale(60)">
+                          <stop stop-color="#2d1b4d"/>
+                          <stop offset="1" stop-color="#0b0814"/>
+                        </radialGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="avatar-online-dot" title="Actively Solving Problems"></span>
+                </div>
+                <div class="card-hero-meta">
+                  <h3 class="meta-name">Divyanshi <i class="fa-solid fa-circle-check verified-badge" title="Verified Engineer"></i></h3>
+                  <p class="meta-sub">B.Tech CSE &bull; Software Engineer</p>
+                  <div class="meta-tags">
+                    <span class="m-tag"><i class="fa-solid fa-code"></i> C / C++ / Python</span>
+                    <span class="m-tag"><i class="fa-solid fa-brain"></i> DSA &amp; Algo</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Code Terminal Snippet -->
+              <div class="card-code-block">
+                <div class="code-line"><span class="c-keyword">class</span> <span class="c-var">DivyanshiEngineer</span> {</div>
+                <div class="code-line indent-1"><span class="c-keyword">public</span>:</div>
+                <div class="code-line indent-1"><span class="c-key">string</span> name = <span class="c-str">"Divyanshi"</span>;</div>
+                <div class="code-line indent-1"><span class="c-key">string</span> education = <span class="c-str">"B.Tech Computer Science &amp; Engg"</span>;</div>
+                <div class="code-line indent-1"><span class="c-key">vector&lt;string&gt;</span> languages = {<span class="c-str">"C"</span>, <span class="c-str">"C++"</span>, <span class="c-str">"Python"</span>};</div>
+                <div class="code-line indent-1"><span class="c-key">string</span> coreStrength = <span class="c-str">"Data Structures &amp; Algorithms"</span>;</div>
+                <div class="code-line indent-1"><span class="c-key">bool</span> isHackathonWinner = <span class="c-keyword">true</span>;</div>
+                <div class="code-line indent-1"><span class="c-keyword">void</span> <span class="c-var">solveProblem</span>() { optimize(Time, Space); }</div>
+                <div class="code-line">};</div>
+              </div>
+
+              <!-- Floating Live Telemetry Cards -->
+              <div class="floating-badge badge-top-right">
+                <div class="f-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="f-info">
+                  <span class="f-val">500+ DSA Solved</span>
+                  <span class="f-desc">LeetCode &bull; Codeforces</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-left">
+                <div class="f-icon trophy-icon"><i class="fa-solid fa-trophy"></i></div>
+                <div class="f-info">
+                  <span class="f-val">Hackathon Winner</span>
+                  <span class="f-desc">National &amp; Collegiate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Stats Counter Strip -->
+      <div class="stats-strip animate-fade-up delay-4">
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-num" data-target="500">0+</div>
+            <div class="stat-label">DSA Problems Solved</div>
+            <div class="stat-sub">Arrays, Trees, Graphs, DP</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="10">0+</div>
+            <div class="stat-label">Hackathons &amp; Sprints</div>
+            <div class="stat-sub">National &amp; Collegiate Competitions</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="15">0+</div>
+            <div class="stat-label">Software Projects Built</div>
+            <div class="stat-sub">C++, Python &amp; Web Architectures</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="100">0%</div>
+            <div class="stat-label">Algorithmic Rigor</div>
+            <div class="stat-sub">Clean Code &amp; Optimized Complexity</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-subtitle"><i class="fa-solid fa-terminal"></i> About Me</span>
+          <h2 class="section-title">Algorithmic Problem Solver &amp; <span class="gradient-text">Aspiring Engineer</span></h2>
+          <p class="section-desc">Passionate about turning complex computational challenges into elegant, optimized solutions.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Bio Card -->
+          <div class="about-card main-bio-card glass-panel animate-on-scroll">
+            <div class="card-glow-edge"></div>
+            <div class="bio-header">
+              <div class="badge-tech"><i class="fa-solid fa-code"></i> Engineering Focus</div>
+              <span class="academic-tag"><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE</span>
+            </div>
+            <h3 class="bio-headline">Hi, I'm Divyanshi — Computer Science Engineer &amp; Tech Enthusiast</h3>
+            <p class="bio-text">
+              I am currently pursuing my <strong>B.Tech in Computer Science and Engineering</strong>. From an early stage in my engineering journey, I developed a strong passion for <strong>algorithmic problem solving, computational complexity, and clean code craftsmanship</strong>.
+            </p>
+            <p class="bio-text">
+              My core technical foundation is built on <strong>C, C++, and Python</strong>, accompanied by an in-depth understanding of <strong>Data Structures and Algorithms (DSA)</strong> — ranging from fundamental linear structures to advanced graph theory, dynamic programming, and greedy heuristics.
+            </p>
+            <p class="bio-text">
+              I love participating in <strong>hackathons and competitive coding sprints</strong> where rapid thinking, effective teamwork, and technical versatility allow us to build functional, scalable prototypes from scratch within 24 to 48 hours.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="pillar-text">
+                  <h4>Data Structures &amp; Algorithms</h4>
+                  <p>Strong analytical foundation in time &amp; space complexity, optimization, and edge-case handling.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="pillar-text">
+                  <h4>C, C++ &amp; Python Mastery</h4>
+                  <p>From low-level memory control in C/C++ (STL, pointers) to rapid AI and backend tooling in Python.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fa-solid fa-trophy"></i></div>
+                <div class="pillar-text">
+                  <h4>Hackathon Grit &amp; Teamwork</h4>
+                  <p>Proven track record ideating, developing, and pitching functional software under high-pressure deadlines.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Highlights & DSA Spotlight -->
+          <div class="about-side-column">
+            
+            <!-- DSA Focus Card -->
+            <div class="about-card aep-card glass-panel animate-on-scroll delay-1">
+              <div class="aep-badge"><i class="fa-solid fa-network-wired"></i> Core Focus</div>
+              <div class="aep-content">
+                <div class="aep-header-flex">
+                  <div>
+                    <h3 class="aep-title">DSA &amp; Problem Solving</h3>
+                    <p class="aep-tagline">Optimizing for Scale &amp; Performance</p>
+                  </div>
+                  <span class="pulse-live-badge">ACTIVE PRACTICE</span>
+                </div>
+                <p class="aep-desc">
+                  Daily competitive coding across LeetCode, HackerRank, and Codeforces. Special interest in Graph Algorithms (Dijkstra, BFS/DFS, TopoSort), Dynamic Programming, Tree Traversals, and Bit Manipulation.
+                </p>
+                <div class="aep-chips">
+                  <span>Arrays &amp; Strings</span>
+                  <span>Trees &amp; BST</span>
+                  <span>Graphs</span>
+                  <span>Dynamic Prog</span>
+                  <span>Recursion</span>
+                  <span>C++ STL</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Snapshot Card -->
+            <div class="about-card facts-card glass-panel animate-on-scroll delay-2">
+              <h4 class="facts-title"><i class="fa-solid fa-id-card"></i> Quick Snapshot</h4>
+              <ul class="facts-list">
+                <li>
+                  <span class="f-label"><i class="fa-solid fa-user"></i> Name</span>
+                  <span class="f-val">Divyanshi</span>
+                </li>
+                <li>
+                  <span class="f-label"><i class="fa-solid fa-graduation-cap"></i> Degree</span>
+                  <span class="f-val">B.Tech Computer Science &amp; Engineering</span>
+                </li>
+                <li>
+                  <span class="f-label"><i class="fa-solid fa-code"></i> Core Languages</span>
+                  <span class="f-val">C, C++, Python</span>
+                </li>
+                <li>
+                  <span class="f-label"><i class="fa-solid fa-brain"></i> Specialization</span>
+                  <span class="f-val">Data Structures &amp; Algorithms (DSA)</span>
+                </li>
+                <li>
+                  <span class="f-label"><i class="fa-solid fa-trophy"></i> Competitive Spirit</span>
+                  <span class="f-val">Hackathon Winner &amp; Coding Competitor</span>
+                </li>
+                <li>
+                  <span class="f-label"><i class="fa-solid fa-location-dot"></i> Location</span>
+                  <span class="f-val">India &bull; Open for Remote &amp; On-Site Opportunities</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-subtitle"><i class="fa-solid fa-layer-group"></i> Technical Arsenal</span>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Proficiencies</span></h2>
+          <p class="section-desc">Focused on algorithmic excellence, system fundamentals, and software development tools.</p>
+        </div>
+
+        <!-- Category Filters for Skills -->
+        <div class="skills-filter-tabs" id="skillTabs">
+          <button class="filter-tab active" data-filter="all"><i class="fa-solid fa-border-all"></i> All Skills</button>
+          <button class="filter-tab" data-filter="languages"><i class="fa-solid fa-code"></i> Languages (C, C++, Python)</button>
+          <button class="filter-tab" data-filter="dsa"><i class="fa-solid fa-brain"></i> Data Structures &amp; Algorithms</button>
+          <button class="filter-tab" data-filter="cs-fundamentals"><i class="fa-solid fa-server"></i> CS Fundamentals</button>
+          <button class="filter-tab" data-filter="tools"><i class="fa-solid fa-wrench"></i> Developer Tools</button>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div class="skills-grid" id="skillsGrid">
+
+          <!-- Core Languages -->
+          <div class="skill-card glass-panel" data-category="languages" data-name="C">
+            <div class="skill-icon-wrap c-icon"><i class="fa-solid fa-c"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">C Programming</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Pointers, memory management (malloc/free), structs, dynamic memory, file I/O, and low-level system understanding.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="languages" data-name="C++">
+            <div class="skill-icon-wrap cpp-icon"><span>C++</span></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">C++ &amp; STL</h4>
+                <span class="skill-level">Expert / Competitive</span>
+              </div>
+              <p class="skill-desc">Object-Oriented Programming (OOP), Standard Template Library (vectors, maps, sets, queues), templates, and competitive coding.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 95%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="languages" data-name="Python">
+            <div class="skill-icon-wrap py-icon"><i class="fa-brands fa-python"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Python</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Data analysis, scripting, algorithm implementation, OOP, Flask/FastAPI, NumPy, and hackathon prototype development.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 90%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Structures & Algorithms -->
+          <div class="skill-card glass-panel" data-category="dsa" data-name="Linear Data Structures">
+            <div class="skill-icon-wrap dsa-icon"><i class="fa-solid fa-list-ol"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Arrays, Linked Lists, Stacks &amp; Queues</h4>
+                <span class="skill-level">Expert</span>
+              </div>
+              <p class="skill-desc">Two-pointer techniques, sliding window, monotonic stacks, circular queues, and amortized complexity analysis.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 96%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="dsa" data-name="Trees & Graphs">
+            <div class="skill-icon-wrap tree-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Trees &amp; Graph Algorithms</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Binary Search Trees, AVL Trees, DFS, BFS, Dijkstra's algorithm, Topological Sort, and Disjoint Set Union (DSU).</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="dsa" data-name="Dynamic Programming">
+            <div class="skill-icon-wrap dp-icon"><i class="fa-solid fa-cubes"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Dynamic Programming &amp; Recursion</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Memoization, bottom-up tabulation, 1D/2D DP states, Knapsack variants, longest common subsequence, and backtracking.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 88%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CS Fundamentals -->
+          <div class="skill-card glass-panel" data-category="cs-fundamentals" data-name="Object-Oriented Programming">
+            <div class="skill-icon-wrap oop-icon"><i class="fa-solid fa-shapes"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Object-Oriented Programming (OOP)</h4>
+                <span class="skill-level">Expert</span>
+              </div>
+              <p class="skill-desc">Encapsulation, Abstraction, Inheritance, Polymorphism, class design, design patterns, and clean modular architecture.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 94%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="cs-fundamentals" data-name="DBMS & SQL">
+            <div class="skill-icon-wrap db-icon"><i class="fa-solid fa-database"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Database Management &amp; SQL</h4>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">Relational databases (MySQL/PostgreSQL), schema design, ER modeling, normalization (1NF-3NF/BCNF), and SQL queries.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 87%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="cs-fundamentals" data-name="Operating Systems">
+            <div class="skill-icon-wrap os-icon"><i class="fa-solid fa-microchip"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Operating Systems &amp; Networks</h4>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">Process scheduling, concurrency, multithreading, deadlocks, virtual memory, TCP/IP, and OSI model layers.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 86%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card glass-panel" data-category="tools" data-name="Git & GitHub">
+            <div class="skill-icon-wrap git-icon"><i class="fa-brands fa-git-alt"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Git &amp; Version Control</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Branching, merge strategies, pull requests, collaborative hackathon workflows, and open-source contributions.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="tools" data-name="Linux & Shell">
+            <div class="skill-icon-wrap linux-icon"><i class="fa-brands fa-linux"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Linux &amp; Command Line</h4>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">Bash scripting, file permissions, compilation with GCC/G++, environment setup, and automation scripts.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 85%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="tools" data-name="Web Basics">
+            <div class="skill-icon-wrap web-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="skill-info">
+              <div class="skill-name-flex">
+                <h4 class="skill-title">Web Tech &amp; Frontend Basics</h4>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">HTML5, CSS3, JavaScript, connecting frontend UIs to Python backends for interactive project demonstrations.</p>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--percent: 88%;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HACKATHONS SECTION -->
+    <section class="section hackathons-section" id="hackathons">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-subtitle"><i class="fa-solid fa-trophy"></i> Competitive Spirit</span>
+          <h2 class="section-title">Hackathon <span class="gradient-text">Victories &amp; Sprints</span></h2>
+          <p class="section-desc">Building rapid, impactful software solutions under high-pressure 24 to 48-hour time constraints.</p>
+        </div>
+
+        <!-- Hackathon Champion Banner -->
+        <div class="hackathon-champion-banner glass-panel animate-on-scroll">
+          <div class="champion-glow"></div>
+          <div class="champ-left">
+            <div class="trophy-badge"><i class="fa-solid fa-trophy"></i></div>
+            <div>
+              <span class="champ-label">COMPETITIVE TRACK RECORD</span>
+              <h3 class="champ-title">Hackathon Winner &amp; Finalist</h3>
+              <p class="champ-desc">Consistently delivering working, scalable prototypes with clean architecture, algorithmic efficiency, and live jury demos.</p>
+            </div>
+          </div>
+          <div class="champ-stats">
+            <div class="champ-stat-box">
+              <span class="cs-num">10+</span>
+              <span class="cs-lbl">Hackathons Completed</span>
+            </div>
+            <div class="champ-stat-box">
+              <span class="cs-num">5+</span>
+              <span class="cs-lbl">Podiums &amp; Special Awards</span>
+            </div>
+            <div class="champ-stat-box">
+              <span class="cs-num">100%</span>
+              <span class="cs-lbl">Working Demo Shipped</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hackathons Showcase Grid -->
+        <div class="hackathons-grid">
+
+          <!-- Hackathon 1 -->
+          <div class="hackathon-card glass-panel animate-on-scroll">
+            <div class="hack-card-top">
+              <span class="hack-badge winner-gold"><i class="fa-solid fa-crown"></i> 1st Place Winner</span>
+              <span class="hack-year">2024</span>
+            </div>
+            <h3 class="hack-title">National Tech Innovation Hackathon</h3>
+            <p class="hack-org"><i class="fa-solid fa-medal"></i> Algorithm &amp; Smart Systems Track</p>
+            <p class="hack-desc">
+              Developed <strong>AlgoRoute AI</strong>: an intelligent vehicle dispatch and route optimization algorithm in C++ and Python using modified Dijkstra's and A* graph search to reduce emergency response times by 38%.
+            </p>
+            <div class="hack-highlights">
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> 1st Prize out of 450+ engineering teams nationwide</div>
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> Sub-millisecond graph route recalculation in C++</div>
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> Handled algorithmic modeling and backend logic</div>
+            </div>
+            <div class="hack-tags">
+              <span>C++</span>
+              <span>Python</span>
+              <span>Graph Algorithms</span>
+              <span>A* Search</span>
+              <span>FastAPI</span>
+            </div>
+          </div>
+
+          <!-- Hackathon 2 -->
+          <div class="hackathon-card glass-panel animate-on-scroll delay-1">
+            <div class="hack-card-top">
+              <span class="hack-badge winner-gold"><i class="fa-solid fa-trophy"></i> Best Algorithmic Solution</span>
+              <span class="hack-year">2024</span>
+            </div>
+            <h3 class="hack-title">Smart India Collegiate Hackathon</h3>
+            <p class="hack-org"><i class="fa-solid fa-flag"></i> Smart Healthcare &amp; Automation Track</p>
+            <p class="hack-desc">
+              Built <strong>MediQueue</strong>: an automated hospital patient triage and resource allocation system with prioritized max-heaps and queue optimization to eliminate clinical bottlenecks during peak hours.
+            </p>
+            <div class="hack-highlights">
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> Awarded Best Algorithmic Architecture</div>
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> Implemented multi-tier Priority Queues and Heap structures</div>
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> Live interactive dashboard for hospital admins</div>
+            </div>
+            <div class="hack-tags">
+              <span>C++ STL</span>
+              <span>Priority Queues</span>
+              <span>Python</span>
+              <span>SQL Database</span>
+              <span>Web Interface</span>
+            </div>
+          </div>
+
+          <!-- Hackathon 3 -->
+          <div class="hackathon-card glass-panel animate-on-scroll delay-2">
+            <div class="hack-card-top">
+              <span class="hack-badge winner-cyan"><i class="fa-solid fa-award"></i> Top 3 Finalist</span>
+              <span class="hack-year">2023</span>
+            </div>
+            <h3 class="hack-title">Inter-University DevSprint (36-Hour Hack)</h3>
+            <p class="hack-org"><i class="fa-solid fa-laptop-code"></i> AI &amp; Data Science Track</p>
+            <p class="hack-desc">
+              Created <strong>CodeSage</strong>: an automated bug detection and code complexity visualizer that parses C/C++ ASTs to identify recursion depth, unbounded memory allocations, and potential time complexity violations.
+            </p>
+            <div class="hack-highlights">
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> Selected among Top 3 out of 180 teams</div>
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> Engineered AST parser and Big-O estimation engine</div>
+            </div>
+            <div class="hack-tags">
+              <span>Python</span>
+              <span>C++ Parser</span>
+              <span>DSA Analysis</span>
+              <span>Flask</span>
+              <span>Interactive UI</span>
+            </div>
+          </div>
+
+          <!-- Hackathon 4 -->
+          <div class="hackathon-card glass-panel animate-on-scroll delay-3">
+            <div class="hack-card-top">
+              <span class="hack-badge winner-cyan"><i class="fa-solid fa-medal"></i> Special Jury Award</span>
+              <span class="hack-year">2023</span>
+            </div>
+            <h3 class="hack-title">CodeStorm Algothon</h3>
+            <p class="hack-org"><i class="fa-solid fa-code"></i> 24-Hour Competitive Sprint</p>
+            <p class="hack-desc">
+              Solved 8 complex algorithmic challenges under strict time constraints, involving dynamic programming, segment trees, and bitmask optimization.
+            </p>
+            <div class="hack-highlights">
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> 100% test case pass rate on all accepted solutions</div>
+              <div class="hh-item"><i class="fa-solid fa-circle-check"></i> Fastest solve time in Tree Algorithms category</div>
+            </div>
+            <div class="hack-tags">
+              <span>C++17</span>
+              <span>Dynamic Programming</span>
+              <span>Segment Trees</span>
+              <span>Bit Manipulation</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SHOWCASE SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-subtitle"><i class="fa-solid fa-flask"></i> Portfolio Works</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Software Projects</span></h2>
+          <p class="section-desc">Projects highlighting algorithmic rigor, system design, and practical software applications.</p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filter-bar">
+          <button class="proj-filter-btn active" data-filter="all">All Projects</button>
+          <button class="proj-filter-btn" data-filter="dsa">DSA &amp; Visualizers</button>
+          <button class="proj-filter-btn" data-filter="cpp">C / C++ Systems</button>
+          <button class="proj-filter-btn" data-filter="python">Python &amp; AI</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- PROJECT 1: Flagship DSA Visualizer -->
+          <div class="project-card glass-panel featured-project animate-on-scroll" data-category="dsa">
+            <div class="project-ribbon">FEATURED &bull; DSA ENGINE</div>
+            
+            <div class="project-preview-box">
+              <div class="project-mockup-screen aeron-mockup">
+                <!-- Visual UI Mockup of DSA Tree & Graph Visualizer -->
+                <div class="screen-header">
+                  <div class="s-dots"><span></span><span></span><span></span></div>
+                  <div class="s-title">DSAVision // Interactive Graph &amp; Tree Visualizer</div>
+                  <div class="s-live"><span class="live-dot"></span> BFS RUNNING</div>
+                </div>
+                <div class="screen-body-drone">
+                  <div class="drone-hud">
+                    <div class="hud-circle">
+                      <div class="hud-crosshair"></div>
+                      <div class="hud-alt">ROOT: 42</div>
+                      <div class="hud-spd">NODES: 16</div>
+                      <div class="hud-bat"><i class="fa-solid fa-microchip"></i> O(V+E)</div>
+                    </div>
+                  </div>
+                  <div class="hud-data-bars">
+                    <div class="hud-graph-line"></div>
+                    <div class="hud-stats-row">
+                      <span>TIME: O(N log N)</span>
+                      <span>SPACE: O(N)</span>
+                      <span>TRAVERSAL: Inorder / Postorder</span>
+                      <span>STATUS: Balanced AVL</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="proj-meta">
+                <span class="proj-cat"><i class="fa-solid fa-diagram-project"></i> Data Structures &amp; Algorithms</span>
+                <span class="proj-status">Flagship Project</span>
+              </div>
+              <h3 class="proj-title">DSAVision: 3D Interactive Algorithm &amp; Tree Visualizer</h3>
+              <p class="proj-desc">
+                An interactive educational visualizer that renders data structure mutations in real-time. Supports AVL tree rotations, Dijkstra's shortest path traversal, B-Tree balancing, and sorting benchmarks with step-by-step code execution.
+              </p>
+              
+              <div class="proj-tech-stack">
+                <span class="stack-badge">C++ Engine</span>
+                <span class="stack-badge">Python Backend</span>
+                <span class="stack-badge">HTML5 Canvas</span>
+                <span class="stack-badge">Modern CSS</span>
+                <span class="stack-badge">JavaScript</span>
+              </div>
+
+              <div class="proj-actions">
+                <button class="btn btn-sm btn-primary open-proj-modal" data-proj="dsavision">
+                  <i class="fa-solid fa-circle-info"></i> Project Deep Dive
+                </button>
+                <a href="#contact" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-envelope"></i> Inquire About Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: CodePulse Online Judge / Arena -->
+          <div class="project-card glass-panel animate-on-scroll delay-1" data-category="cpp">
+            <div class="project-preview-box">
+              <div class="project-mockup-screen resq-mockup">
+                <div class="screen-header">
+                  <div class="s-dots"><span></span><span></span><span></span></div>
+                  <div class="s-title">CodePulse // Sandbox C++ Runner</div>
+                </div>
+                <div class="screen-body-mesh">
+                  <div class="mesh-nodes">
+                    <span class="m-node n1">G++ 17</span>
+                    <span class="m-line l1"></span>
+                    <span class="m-node n2">Sandboxed IPC</span>
+                    <span class="m-line l2"></span>
+                    <span class="m-node n3">Output 0ms</span>
+                  </div>
+                  <div class="mesh-alert"><i class="fa-solid fa-check-circle"></i> 15/15 Test Cases Passed</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="proj-meta">
+                <span class="proj-cat"><i class="fa-solid fa-terminal"></i> Systems &amp; C++</span>
+                <span class="proj-win"><i class="fa-solid fa-trophy"></i> High Performance</span>
+              </div>
+              <h3 class="proj-title">CodePulse: Fast Code Execution Sandbox</h3>
+              <p class="proj-desc">
+                A secure, lightweight code evaluation engine in C++ and Python that compiles and benchmarks source code against predefined test cases with CPU and memory limits.
+              </p>
+              <div class="proj-tech-stack">
+                <span class="stack-badge">C++17</span>
+                <span class="stack-badge">Linux System Calls</span>
+                <span class="stack-badge">Python</span>
+                <span class="stack-badge">Process Isolation</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn btn-sm btn-primary open-proj-modal" data-proj="codepulse">
+                  <i class="fa-solid fa-circle-info"></i> Project Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: NeuroPredict AI -->
+          <div class="project-card glass-panel animate-on-scroll delay-2" data-category="python">
+            <div class="project-preview-box">
+              <div class="project-mockup-screen dev-mockup">
+                <div class="screen-header">
+                  <div class="s-dots"><span></span><span></span><span></span></div>
+                  <div class="s-title">NeuroPredict // Python ML Engine</div>
+                </div>
+                <div class="screen-body-code">
+                  <div class="code-flow-bar">
+                    <span class="badge-pill pass"><i class="fa-solid fa-check"></i> Accuracy: 94.6%</span>
+                    <span class="badge-pill qps">Latency: 14ms</span>
+                  </div>
+                  <div class="terminal-logs">
+                    <p>&gt; [Model] Loading weights into memory...</p>
+                    <p>&gt; [Preprocessing] Feature scaling &amp; normalization complete</p>
+                    <p>&gt; [Prediction] Patient risk profile generated (Low Risk)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="proj-meta">
+                <span class="proj-cat"><i class="fa-brands fa-python"></i> Machine Learning &amp; Python</span>
+                <span class="proj-status">Hackathon Project</span>
+              </div>
+              <h3 class="proj-title">NeuroPredict: Healthcare Analytics Engine</h3>
+              <p class="proj-desc">
+                A Python-based predictive analytics tool utilizing Scikit-learn and Pandas to assess early indicators for chronic conditions with an interactive dashboard interface.
+              </p>
+              <div class="proj-tech-stack">
+                <span class="stack-badge">Python</span>
+                <span class="stack-badge">Pandas / NumPy</span>
+                <span class="stack-badge">Scikit-learn</span>
+                <span class="stack-badge">Flask API</span>
+                <span class="stack-badge">Chart.js</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn btn-sm btn-primary open-proj-modal" data-proj="neuropredict">
+                  <i class="fa-solid fa-circle-info"></i> Project Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: FileZip Compression Tool in C -->
+          <div class="project-card glass-panel animate-on-scroll delay-3" data-category="cpp">
+            <div class="project-preview-box">
+              <div class="project-mockup-screen aura-mockup">
+                <div class="screen-header">
+                  <div class="s-dots"><span></span><span></span><span></span></div>
+                  <div class="s-title">FileZip // Huffman C Engine</div>
+                </div>
+                <div class="screen-body-design">
+                  <div class="design-swatches">
+                    <span class="sw-c1"></span>
+                    <span class="sw-c2"></span>
+                    <span class="sw-c3"></span>
+                    <span class="sw-c4"></span>
+                  </div>
+                  <div class="design-components-preview">
+                    <div class="d-btn-preview">Ratio: 58%</div>
+                    <div class="d-toggle-preview"><span class="d-knob"></span></div>
+                    <div class="d-chip-preview">Bitstream Valid</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="proj-meta">
+                <span class="proj-cat"><i class="fa-solid fa-file-zipper"></i> Systems &amp; Compression</span>
+                <span class="proj-status">C / C++ Project</span>
+              </div>
+              <h3 class="proj-title">Huffman File Compressor &amp; Decompressor</h3>
+              <p class="proj-desc">
+                A lossless file compression utility implemented in pure C/C++ using Huffman Coding, priority queues (min-heaps), and bitwise serialization, achieving 40-60% compression ratios on text data.
+              </p>
+              <div class="proj-tech-stack">
+                <span class="stack-badge">C Language</span>
+                <span class="stack-badge">Huffman Coding</span>
+                <span class="stack-badge">Bit Manipulation</span>
+                <span class="stack-badge">Min-Heap</span>
+                <span class="stack-badge">Binary I/O</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn btn-sm btn-primary open-proj-modal" data-proj="huffman">
+                  <i class="fa-solid fa-circle-info"></i> Project Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-subtitle"><i class="fa-solid fa-briefcase"></i> Experience &amp; Leadership</span>
+          <h2 class="section-title">Academic &amp; Practical <span class="gradient-text">Experience</span></h2>
+          <p class="section-desc">Applying engineering fundamentals, mentoring peers, and driving software projects.</p>
+        </div>
+
+        <div class="experience-timeline">
+
+          <!-- Role 1: Software Engineering Intern / Fellow -->
+          <div class="exp-item animate-on-scroll">
+            <div class="exp-dot">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="exp-card glass-panel">
+              <div class="exp-header">
+                <div>
+                  <span class="exp-role">Software Engineering Intern</span>
+                  <h3 class="exp-company">Tech Systems &amp; Solutions</h3>
+                </div>
+                <div class="exp-time">
+                  <span class="time-badge">2024 - Present</span>
+                  <span class="loc-badge"><i class="fa-solid fa-location-dot"></i> Internship / Project</span>
+                </div>
+              </div>
+              <p class="exp-lead">Contributing to backend service development, data processing scripts, and algorithm optimization.</p>
+              <ul class="exp-bullets">
+                <li>Developed modular Python and C++ backend utilities for automating data ingestion and report generation.</li>
+                <li>Refactored legacy routines to improve query and processing times by 28% using hash-maps and binary search.</li>
+                <li>Wrote comprehensive unit tests and participated in weekly code reviews focusing on clean code principles.</li>
+              </ul>
+              <div class="exp-chips">
+                <span>C++</span>
+                <span>Python</span>
+                <span>Data Structures</span>
+                <span>Git</span>
+                <span>Unit Testing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2: DSA Mentor & Problem Setter -->
+          <div class="exp-item animate-on-scroll delay-1">
+            <div class="exp-dot">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="exp-card glass-panel">
+              <div class="exp-header">
+                <div>
+                  <span class="exp-role">DSA Lead &amp; Problem Setter</span>
+                  <h3 class="exp-company">University Coding &amp; Algorithm Club</h3>
+                </div>
+                <div class="exp-time">
+                  <span class="time-badge">2023 - Present</span>
+                  <span class="loc-badge"><i class="fa-solid fa-graduation-cap"></i> University</span>
+                </div>
+              </div>
+              <p class="exp-lead">Mentoring peers in competitive programming, designing contest problems, and leading DSA study circles.</p>
+              <ul class="exp-bullets">
+                <li>Conducted interactive workshops on dynamic programming, graph algorithms, and C++ STL for over 150+ students.</li>
+                <li>Created original algorithmic problems with edge cases, test suites, and Big-O complexity constraints for campus contests.</li>
+                <li>Helped junior students build consistency on LeetCode and prepare for technical coding interviews.</li>
+              </ul>
+              <div class="exp-chips">
+                <span>Problem Solving</span>
+                <span>C++ STL</span>
+                <span>Mentorship</span>
+                <span>Curriculum Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 3: Hackathon Team Lead -->
+          <div class="exp-item animate-on-scroll delay-2">
+            <div class="exp-dot">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="exp-card glass-panel">
+              <div class="exp-header">
+                <div>
+                  <span class="exp-role">Technical Lead &amp; Hackathon Captain</span>
+                  <h3 class="exp-company">B.Tech CSE Project Squad</h3>
+                </div>
+                <div class="exp-time">
+                  <span class="time-badge">2023 - Present</span>
+                  <span class="loc-badge"><i class="fa-solid fa-medal"></i> Competitions</span>
+                </div>
+              </div>
+              <p class="exp-lead">Leading interdisciplinary teams in 24 to 48-hour competitive software hackathons.</p>
+              <ul class="exp-bullets">
+                <li>Defined system architecture, API schemas, and task delegation for fast-paced 24-hour delivery milestones.</li>
+                <li>Guided teams to 1st place and podium finishes through robust code, working demos, and confident technical presentations.</li>
+              </ul>
+              <div class="exp-chips">
+                <span>Team Leadership</span>
+                <span>Rapid Prototyping</span>
+                <span>Pitching</span>
+                <span>Git Collaboration</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section class="section achievements-section" id="achievements">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-subtitle"><i class="fa-solid fa-star"></i> Honors &amp; Milestones</span>
+          <h2 class="section-title">Key <span class="gradient-text">Achievements</span></h2>
+          <p class="section-desc">Recognition of algorithmic ability, competitive grit, and academic dedication.</p>
+        </div>
+
+        <div class="achievements-grid">
+
+          <div class="achieve-card glass-panel animate-on-scroll">
+            <div class="achieve-icon-box gold"><i class="fa-solid fa-trophy"></i></div>
+            <div class="achieve-content">
+              <span class="achieve-tag">Hackathon Honor</span>
+              <h3 class="achieve-title">1st Place - National Tech Innovation Hackathon</h3>
+              <p class="achieve-text">Secured 1st Place out of 450+ teams nationwide for creating an optimized emergency routing engine in C++ and Python.</p>
+            </div>
+          </div>
+
+          <div class="achieve-card glass-panel animate-on-scroll delay-1">
+            <div class="achieve-icon-box violet"><i class="fa-solid fa-code"></i></div>
+            <div class="achieve-content">
+              <span class="achieve-tag">Competitive Coding</span>
+              <h3 class="achieve-title">500+ LeetCode &amp; Coding Platform Problems</h3>
+              <p class="achieve-text">Solved 500+ problems across LeetCode, HackerRank, and Codeforces, maintaining high consistency in graph and tree problems.</p>
+            </div>
+          </div>
+
+          <div class="achieve-card glass-panel animate-on-scroll delay-2">
+            <div class="achieve-icon-box cyan"><i class="fa-solid fa-award"></i></div>
+            <div class="achieve-content">
+              <span class="achieve-tag">Special Accolade</span>
+              <h3 class="achieve-title">Best Algorithmic Architecture Award</h3>
+              <p class="achieve-text">Commended for implementing clean Priority Queues and Heap structures at the Smart India Collegiate Hackathon.</p>
+            </div>
+          </div>
+
+          <div class="achieve-card glass-panel animate-on-scroll delay-3">
+            <div class="achieve-icon-box emerald"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="achieve-content">
+              <span class="achieve-tag">Academic Merit</span>
+              <h3 class="achieve-title">High Standing in B.Tech Computer Science</h3>
+              <p class="achieve-text">Consistently strong academic performance in core subjects including Data Structures, Algorithms, OS, and DBMS.</p>
+            </div>
+          </div>
+
+          <div class="achieve-card glass-panel animate-on-scroll delay-4">
+            <div class="achieve-icon-box gold"><i class="fa-solid fa-certificate"></i></div>
+            <div class="achieve-content">
+              <span class="achieve-tag">Certification</span>
+              <h3 class="achieve-title">Advanced Data Structures in C++ &amp; Python</h3>
+              <p class="achieve-text">Completed verified coursework and certifications in Object-Oriented Programming and Algorithmic Analysis.</p>
+            </div>
+          </div>
+
+          <div class="achieve-card glass-panel animate-on-scroll delay-5">
+            <div class="achieve-icon-box violet"><i class="fa-solid fa-medal"></i></div>
+            <div class="achieve-content">
+              <span class="achieve-tag">Campus Recognition</span>
+              <h3 class="achieve-title">Lead Problem Setter &amp; Contest Host</h3>
+              <p class="achieve-text">Curated problem sets and organized campus-wide competitive programming contests for 200+ participants.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-subtitle"><i class="fa-solid fa-envelope-open-text"></i> Get In Touch</span>
+          <h2 class="section-title">Let's Connect &amp; <span class="gradient-text">Collaborate</span></h2>
+          <p class="section-desc">Looking for full-time software engineering roles, internships, or exciting hackathon teams? Reach out!</p>
+        </div>
+
+        <div class="contact-layout">
+
+          <!-- Left Info Cards -->
+          <div class="contact-info-panel glass-panel animate-on-scroll">
+            <div class="contact-badge"><i class="fa-solid fa-comments"></i> Direct Channels</div>
+            <h3 class="ci-title">Contact Information</h3>
+            <p class="ci-desc">I am eager to contribute my skills in C, C++, Python, and DSA to impactful software teams.</p>
+
+            <div class="contact-cards-list">
+
+              <div class="contact-channel-card">
+                <div class="channel-icon mail-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="channel-body">
+                  <span class="c-type">Email Address</span>
+                  <a href="mailto:divyanshi.cse@gmail.com" class="c-val">divyanshi.cse@gmail.com</a>
+                </div>
+                <button class="channel-copy-btn" id="copyMailBtn" title="Copy to clipboard">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon in-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="channel-body">
+                  <span class="c-type">LinkedIn Network</span>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="c-val">linkedin.com/in/divyanshi-tech</a>
+                </div>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="channel-copy-btn" title="Open Link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon gh-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="channel-body">
+                  <span class="c-type">GitHub Profile</span>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="c-val">github.com/divyanshi-dev</a>
+                </div>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="channel-copy-btn" title="Open Link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon loc-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="channel-body">
+                  <span class="c-type">Location &amp; Availability</span>
+                  <span class="c-val">India &bull; Available for Remote &amp; Relocation</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Pitch Box -->
+            <div class="contact-aeron-box">
+              <div class="ca-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div class="ca-text">
+                <strong>Interested in hiring or teaming up?</strong>
+                <p>Always enthusiastic about software development roles, hackathons, and research projects.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Interactive Contact Form -->
+          <div class="contact-form-panel glass-panel animate-on-scroll delay-1">
+            <h3 class="cf-title">Send a Message</h3>
+            <p class="cf-desc">Have an opportunity, question, or want to discuss a problem? Leave a message below.</p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="userName"><i class="fa-regular fa-user"></i> Your Name *</label>
+                  <input type="text" id="userName" name="name" placeholder="e.g. Alex Smith" required autocomplete="name">
+                  <span class="error-msg" id="nameError">Please enter your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="userEmail"><i class="fa-regular fa-envelope"></i> Your Email *</label>
+                  <input type="email" id="userEmail" name="email" placeholder="e.g. alex@company.com" required autocomplete="email">
+                  <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="messageSubject"><i class="fa-solid fa-tag"></i> Subject / Purpose *</label>
+                <select id="messageSubject" name="subject" required>
+                  <option value="" disabled selected>Select an option...</option>
+                  <option value="Internship / Job Opportunity">Software Engineering / Internship Opportunity</option>
+                  <option value="Hackathon Teaming">Hackathon Collaboration</option>
+                  <option value="Project Collaboration">Software &amp; DSA Project</option>
+                  <option value="General Inquiries">General Networking / Tech Chat</option>
+                </select>
+                <span class="error-msg" id="subjectError">Please choose a subject.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage"><i class="fa-regular fa-message"></i> Your Message *</label>
+                <textarea id="userMessage" name="message" rows="5" placeholder="Share your message or opportunity details..." required></textarea>
+                <span class="error-msg" id="messageError">Please type a message of at least 10 characters.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitFormBtn">
+                <span class="btn-text">Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+                <div class="btn-loader" id="btnLoader"></div>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-name">Divyanshi</span>
+            <span class="logo-slash">/</span>
+            <span class="logo-bracket">&gt;</span>
+          </div>
+          <p class="footer-tagline">
+            B.Tech CSE &bull; Software Engineer &bull; C, C++, Python &bull; Data Structures &amp; Algorithms &bull; Hackathon Achiever.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#hackathons">Hackathons</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Core Tech</h4>
+          <ul>
+            <li><span>C Programming</span></li>
+            <li><span>C++ &amp; STL</span></li>
+            <li><span>Python Development</span></li>
+            <li><span>Data Structures &amp; Algorithms</span></li>
+            <li><span>Object-Oriented Design</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Connect</h4>
+          <div class="footer-social-icons">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+            <a href="mailto:divyanshi.cse@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="currentYear">2026</span> Divyanshi. Built with pure HTML5, Vanilla CSS3 &amp; JavaScript. High performance &amp; zero bloat.
+        </p>
+        <a href="#hero" class="back-to-top" aria-label="Back to top">
+          <span>Back to Top</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL VIEWER -->
+  <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+    <div class="modal-container glass-panel">
+      <button class="modal-close" id="closeResumeBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-header-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <div>
+          <h3 id="resumeTitle" class="modal-title">Divyanshi — Curriculum Vitae Snapshot</h3>
+          <p class="modal-sub">B.Tech CSE &bull; Software Engineer &bull; DSA Specialist</p>
+        </div>
+      </div>
+      <div class="modal-body resume-body">
+        
+        <!-- Summary -->
+        <div class="resume-block">
+          <h4><i class="fa-solid fa-user-check"></i> Professional Profile</h4>
+          <p>Goal-oriented Computer Science undergraduate with a strong foundation in Data Structures, Algorithms, and Object-Oriented Programming. Highly proficient in C, C++, and Python with practical experience in hackathons and software project development.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="resume-block">
+          <h4><i class="fa-solid fa-graduation-cap"></i> Education</h4>
+          <div class="resume-row">
+            <div>
+              <strong>Bachelor of Technology (B.Tech) in Computer Science &amp; Engineering</strong>
+              <div class="res-sub">Relevant Coursework: Data Structures &amp; Algorithms, Operating Systems, Database Management Systems, Computer Networks, OOP</div>
+            </div>
+            <span class="res-date">2022 - 2026</span>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="resume-block">
+          <h4><i class="fa-solid fa-laptop-code"></i> Technical Skills</h4>
+          <div class="res-grid-3">
+            <div><strong>Languages:</strong> C, C++ (STL), Python, SQL, HTML5, CSS3, JavaScript</div>
+            <div><strong>Core Areas:</strong> Data Structures, Algorithms (Graphs, Trees, DP), OOP, DBMS, OS</div>
+            <div><strong>Tools &amp; Platforms:</strong> Git, GitHub, Linux / Bash, VS Code, GCC/G++, LeetCode, Codeforces</div>
+          </div>
+        </div>
+
+        <!-- Key Highlights -->
+        <div class="resume-block">
+          <h4><i class="fa-solid fa-trophy"></i> Key Achievements</h4>
+          <ul>
+            <li><strong>1st Place Winner:</strong> National Tech Innovation Hackathon out of 450+ engineering teams.</li>
+            <li><strong>500+ Algorithmic Challenges Solved:</strong> Across LeetCode and competitive coding platforms.</li>
+            <li><strong>DSA Lead &amp; Mentor:</strong> Mentoring students and organizing collegiate coding competitions.</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="downloadResumeBtn">
+          <i class="fa-solid fa-download"></i>
+          <span>Download CV (PDF)</span>
+        </button>
+        <button class="btn btn-ghost" id="closeResumeBtn2">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DEEP DIVE MODAL -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-container glass-panel">
+      <button class="modal-close" id="closeProjectBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-header-icon" id="modalProjectIcon"><i class="fa-solid fa-cube"></i></div>
+        <div>
+          <h3 id="modalProjectTitle" class="modal-title">Project Name</h3>
+          <p id="modalProjectSubtitle" class="modal-sub">Category &bull; Stack</p>
+        </div>
+      </div>
+      <div class="modal-body" id="modalProjectBody">
+        <!-- Injected dynamically via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <a href="#contact" class="btn btn-primary" id="modalProjectContactBtn">
+          <i class="fa-solid fa-comment-dots"></i> Discuss This Project
+        </a>
+        <button class="btn btn-ghost" id="closeProjectBtn2">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Custom Logic Script -->
+  <script src="script.js"></script>
+</body>
+</html>
